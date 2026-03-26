@@ -9,7 +9,7 @@ public class App {
         int menu;
 
         Conta conta1 = new Conta();
-
+        Funcionario func1 = new Funcionario();
         do {
 
             System.out.println("----- SISTEMA BANCÁRIO ----- \n");
@@ -33,7 +33,7 @@ public class App {
 
                     System.out.println("Digite o nome do cliente");
 
-                    conta1.setNome(sc.next());
+                    conta1.nome = sc.nextLine();
 
                     System.out.println("Digite o numero da conta");
 

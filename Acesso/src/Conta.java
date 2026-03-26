@@ -1,83 +1,78 @@
-
 public class Conta {
 
-    // Atributos da classe
+//Atributos da classe
 
-    double saldo;
+  Double saldo;
 
-    private String nome;
+  String nome;
 
-    int numero;
+  Int numero;
 
-    double limite;
+  Double limite;
 
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-    // getters e setters
-    // public void setNome(String nome) {
-    //     if (nome != null && nome.length() > 1) {
-    //         this.nome = nome;
-    //     }
-    // }
 
-    // public void saque(double valor){
 
-    // if(saldo>= valor && valor > 0){
+  // public void saque(double valor){
 
-    // //this.saldo = this.saldo - valor;
+  //  if(saldo>= valor && valor > 0){
 
-    // this.saldo -= valor;
+  //    //this.saldo = this.saldo - valor;
 
-    // System.out.println("Saque efetuado com sucesso!");
+  //    this.saldo -= valor;
 
-    // }else{
+  //    System.out.println("Saque efetuado com sucesso!");
 
-    // System.out.println("Saldo insuficiente ou valor inválido");
+  //  }else{
 
-    // }
+  //    System.out.println("Saldo insuficiente ou valor inválido");
 
-    // System.out.println("Seu saldo atual é: " + this.saldo);
+  //  }
 
-    // }
+  //  System.out.println("Seu saldo atual é: " + this.saldo);
 
-    boolean sacarVerifica(double quantidade) {
+  // }
 
-        if (quantidade > this.saldo) {
+    boolean sacarVerifica(double quantidade){
 
-            return false;
+      if (quantidade > this.saldo ){
 
-        } else {
+        return false;
 
-            double novoSaldo = this.saldo - quantidade;
+      }else{
 
-            this.saldo = novoSaldo;
+        double novoSaldo = this.saldo - quantidade;
 
-            return true;
+        this.saldo = novoSaldo;
 
-        }
+        return true;
+
+      }
 
     }
 
-    public String toString() {
+    public String toString(){
 
-        return "Nome: " + this.nome + "| Num.: " + this.numero + " | Saldo: " + this.saldo + "| Limite: " + this.limite;
+      return "Nome: " + this.nome + "| Num.: " + this.numero + " | Saldo: " + this.saldo + "| Limite: " + this.limite;
 
     }
 
-    boolean depositarVerifica(double deposito) {
 
-        if (deposito <= 0) {
 
-            return false;
 
-        } else {
 
-            this.saldo += deposito;
+    boolean depositarVerifica(double deposito){
 
-            return true;
+      if(deposito<=0){
 
-        }
+        return false;
+
+      }else{
+
+        this.saldo += deposito;
+
+        return true;
+
+      }
 
     }
 
